@@ -27,8 +27,75 @@ regex = '''-----BEGIN PGP PRIVATE KEY BLOCK-----'''
 description = "Slack token"
 regex = '''xox[baprs]-.*'''
 [[regexes]]
-description = "Strip API Key"
+description = "Stripe API Key"
 regex = '''(?i)(sk|pk)_(test|live)_[0-9a-zA-Z]{10,32}'''
+
+# Regular expressions from "How Bad Can It Git? Characterizing Secret Leakage in Public GitHub Repositories"
+# https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_04B-3_Meli_paper.pdf
+
+[[regexes]]
+description = "How Bad Can It Git - Twitter Access Token"
+regex = '''[1-9][0-9]+-[0-9a-zA-Z]{40}'''
+[[regexes]]
+description = "How Bad Can It Git - Facebook Access Token"
+regex = '''EAACEdEose0cBA[0-9A-Za-z]+'''
+[[regexes]]
+description = "How Bad Can It Git - Google YouTube API Key"
+regex = '''AIza[0-9A-Za-z\-_]{35}'''
+[[regexes]]
+description = "How Bad Can It Git - Google YouTube OAuth ID"
+regex = '''[0-9]+-[0-9A-Za-z_]{32}\.apps\.googleusercontent\.com'''
+[[regexes]]
+description = "How Bad Can It Git - Picatic API Key"
+regex = '''sk_live_[0-9a-z]{32}'''
+[[regexes]]
+description = "How Bad Can It Git - Stripe Standard API Key"
+regex = '''sk_live_[0-9a-zA-Z]{24}'''
+[[regexes]]
+description = "How Bad Can It Git - Stripe Restricted API Key"
+regex = '''rk_live_[0-9a-zA-Z]{24}'''
+[[regexes]]
+description = "How Bad Can It Git - Square Access Token"
+regex = '''sq0atp-[0-9A-Za-z\-_]{22}'''
+[[regexes]]
+description = "How Bad Can It Git - Square OAuth Secret"
+regex = '''sq0csp-[0-9A-Za-z\-_]{43}'''
+[[regexes]]
+description = "How Bad Can It Git - PayPal Braintree Access Token"
+regex = '''access_token\$production\$[0-9a-z]{16}\$[0-9a-f]{32}'''
+[[regexes]]
+description = "How Bad Can It Git - Amazon MWS Auth Token"
+regex = '''amzn\.mws\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'''
+[[regexes]]
+description = "How Bad Can It Git - Google Gmail API Key"
+regex = '''AIza[0-9A-Za-z\-_]{35}'''
+[[regexes]]
+description = "How Bad Can It Git - Google Gmail OAuth ID"
+regex = '''[0-9]+-[0-9A-Za-z_]{32}\.apps\.googleusercontent\.com'''
+[[regexes]]
+description = "How Bad Can It Git - Twilio API Key"
+regex = '''SK[0-9a-fA-F]{32}'''
+[[regexes]]
+description = "How Bad Can It Git - MailGun API Key"
+regex = '''key-[0-9a-zA-Z]{32}'''
+[[regexes]]
+description = "How Bad Can It Git - MailChimp API Key"
+regex = '''[0-9a-f]{32}-us[0-9]{1,2}'''
+[[regexes]]
+description = "How Bad Can It Git - Google Drive API Key"
+regex = '''AIza[0-9A-Za-z\-_]{35}'''
+[[regexes]]
+description = "How Bad Can It Git - Google Drive OAuth ID"
+regex = '''[0-9]+-[0-9A-Za-z_]{32}\.apps\.googleusercontent\.com'''
+[[regexes]]
+description = "How Bad Can It Git - Amazon AWS Access Key ID"
+regex = '''AKIA[0-9A-Z]{16}'''
+[[regexes]]
+description = "How Bad Can It Git - Google Cloud Platform API Key"
+regex = '''AIza[0-9A-Za-z\-_]{35}'''
+[[regexes]]
+description = "How Bad Can It Git - Google Cloud Platform OAuth ID"
+regex = '''[0-9]+-[0-9A-Za-z_]{32}\.apps\.googleusercontent\.com'''
 
 [whitelist]
 regexes = [
